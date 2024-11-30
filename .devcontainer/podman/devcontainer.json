@@ -1,0 +1,13 @@
+{
+	"name": "Devcontainer / Jekyll / distrosetta.com",
+	"image": "mcr.microsoft.com/devcontainers/jekyll:2-bookworm",
+	"runArgs": [
+		"--security-opt", "label=disable",
+		"--userns=host",
+		"--hostname=devcontainer.distrosetta"
+	  ],
+	"remoteUser": "root",
+	
+	"onCreateCommand": ".devcontainer/bin/onCreateCommand.sh"
+	// "updateContentCommand": ".devcontainer/bin/updateContentCommand.sh",
+}
