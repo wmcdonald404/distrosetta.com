@@ -4,6 +4,9 @@ nav_order: 2
 ---
 
 # Package Queries &  Management
+Package managers like `rpm`, `dpkg` and similar read, update and delete packages from the local package database. On the whole they do not help resolve package dependencies, this is where the subsequent tools, `yum`, `apt` and `apt-get` come in to play.
+
+You can, for example, use `rpm`to install a package and and its dependencies, but you also need to use it to identify those depencies, and which package(s) provide them. 
 
 | Task  | rpm | dpkg |
 |--- |--- |--- |
@@ -20,6 +23,8 @@ nav_order: 2
 
 
 # Repository Queries &  Management
+
+`yum`, `apt` and `apt-get` and similar package management tools help with both package repository management, and package installation with automatic dependency resolution based on additional cached metadata.
 
 | Task  | yum | apt |
 |--- |--- |--- |
