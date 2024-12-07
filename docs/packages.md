@@ -41,3 +41,5 @@ nav_order: 2
 > **Note [2]:** `apt-file` is not typically installed by default, it requires `apt-get -y install apt-file` before use
 
 > Note: RHEL 7 and earlier use Yum. RHEL 8 onwards use DNF. Syntax is largely interchangeable.
+
+> Note: DNF moved from 3 -> 4 -> 5. DNF 3 & 4 are Python-based. [DNF5 is C++](https://github.com/rpm-software-management/dnf5/), this includes more rigorous structure for commands/subcommands. As a result certain commands may need more careful ordering but otherwise work as before. 
