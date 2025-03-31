@@ -20,3 +20,5 @@ This effort is very much inspired by the [Rosetta Stone for Unix](https://bhami.
 
 # Contribution
 All contributions are welcome, please feel free to send PRs if there's something you'd like added/included. The initial focus is RHEL/Fedora and Debian/Ubuntu but deltas for  any other distributions would be appreciated.
+
+The source repo is [https://github.com/wmcdonald404/distrosetta.com](https://github.com/wmcdonald404/distrosetta.com)
