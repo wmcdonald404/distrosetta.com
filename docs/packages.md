@@ -36,13 +36,13 @@ You can, for example, use `rpm`to install a package and and its dependencies, bu
 | Search for specific packages | `yum search <packagename>` | `apt search <packagename>` |
 | Get more info for specific packages | `yum info <packagename>` | `apt info <packagename>` |
 | Install a package | `yum install -y <packagename>` | `apt-get -y install <packagename>` |
-| Refresh the local version of upstream repository metadata/cache  [1] | `yum makecache` | `apt-get update` |
+| Refresh the local version of upstream repository metadata/cache | `yum makecache` **[1]** | `apt-get update` |
 | Show all applicable updates from upstream repositories | `yum check-update` | `apt-get upgrade -s` (see: `man apt-get`) |
 | Update all packages | `yum update -y`  | `apt-get -y upgrade` or `apt-get -y dist-upgrade` |
 | Clear local version of upstream repository metadata/cache | `yum clean all` | `apt-get clean` | 
-| List all files in a package from the repository [2] | `yum repoquery -l <packagename>` | `apt-file list <packagename>`  |
+| List all files in a package from the repository | `yum repoquery -l <packagename>` | `apt-file list <packagename>` **[2]** |
 | Get the changelog for an package in a repository | `dnf changelog <packagename>` | `apt-get changelog <packagename>` |
-| Get the package that provides a specific file | `dnf provides <filename>` | `apt-file search <filename>` |
+| Get the package that provides a specific file | `dnf provides <filename>` | `apt-file search <filename>` **[2]** |
 
 
 > **Note [1]:** Yum's default cache expiry is 90 mins so `makecache` is rarely required
