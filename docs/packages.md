@@ -23,7 +23,6 @@ You can, for example, use `rpm`to install a package and and its dependencies, bu
 | Get the changelog for an installed package | `rpm -q --changelog <packagename>` | `zcat /usr/share/doc/<packagename>/changelog.Debian.gz` |
 
 
-
 # Repository Queries &  Management
 
 `yum`, `dnf`, `apt` and `apt-get` and similar package management tools help with both package repository management, and package installation with automatic dependency resolution based on additional cached metadata.
