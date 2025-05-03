@@ -19,7 +19,7 @@ You can, for example, use `rpm`to install a package and and its dependencies, bu
 | List info on a package file | `rpm -qpi <packagename.rpm>` | `dpkg --info <packagename.deb>` |
 | List all files in a package file | `rpm -qpl <packagename.rpm>` | `dpkg --contents <packagename.deb>` |
 | List key config files in a package file | `rpm -qpc <packagename>` |  |
-| List key documentation files in a package file | `rpm -qpd <packagename>` |  `/usr/share/doc/<packagename>>/`|
+| List key documentation files in a package file | `rpm -qpd <packagename>` |  `/usr/share/doc/<packagename>/`|
 | Get the changelog for an installed package | `rpm -q --changelog <packagename>` | `zcat /usr/share/doc/<packagename>/changelog.Debian.gz` |
 
 
@@ -30,7 +30,7 @@ You can, for example, use `rpm`to install a package and and its dependencies, bu
 | Task  | yum | apt |
 |--- |--- |--- |
 | List all installed packages | `yum list installed` | `apt list --installed` |
-| List all available packages | `yum list available` | `apt list \| grep -v installed` |
+| List all available packages | `yum list available` | `apt list | grep -v installed` |
 | List all installed and available packages | `yum list all` | `apt list` |
 | List all installed and available packages for a package | `yum list <packagename>` |  |
 | Search for specific packages | `yum search <packagename>` | `apt search <packagename>` |
