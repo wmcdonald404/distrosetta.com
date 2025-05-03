@@ -19,12 +19,14 @@ You can, for example, use `rpm`to install a package and and its dependencies, bu
 | List info on a package file | `rpm -qpi <packagename.rpm>` | `dpkg --info <packagename.deb>` |
 | List all files in a package file | `rpm -qpl <packagename.rpm>` | `dpkg --contents <packagename.deb>` |
 | List key config files in a package file | `rpm -qpc <packagename>` |  |
-| List key documentation files in a package file | `rpm -qpd <packagename>` |  |
+| List key documentation files in a package file | `rpm -qpd <packagename>` |  `/usr/share/doc/<packagename>>/`|
+| Get the changelog for an installed package | `rpm -q --changelog <packagename>` | `zcat /usr/share/doc/<packagename>/changelog.Debian.gz` |
+
 
 
 # Repository Queries &  Management
 
-`yum`, `apt` and `apt-get` and similar package management tools help with both package repository management, and package installation with automatic dependency resolution based on additional cached metadata.
+`yum`, `dnf`, `apt` and `apt-get` and similar package management tools help with both package repository management, and package installation with automatic dependency resolution based on additional cached metadata.
 
 | Task  | yum | apt |
 |--- |--- |--- |
@@ -40,6 +42,9 @@ You can, for example, use `rpm`to install a package and and its dependencies, bu
 | Update all packages | `yum update -y`  | `apt-get -y upgrade` or `apt-get -y dist-upgrade` |
 | Clear local version of upstream repository metadata/cache | `yum clean all` | `apt-get clean` | 
 | List all files in a package from the repository [2] | `yum repoquery -l <packagename>` | `apt-file list <packagename>`  |
+| Get the changelog for an package in a repository | `dnf changelog <packagename>` | `apt-get changelog <packagename>` |
+| Get the package that provides a specific file | `dnf provides <filename>` | `apt-file search <filename>` |
+
 
 > **Note [1]:** Yum's default cache expiry is 90 mins so `makecache` is rarely required
 
